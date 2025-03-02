@@ -75,6 +75,11 @@ class SachSeviceTest {
         sachSevice.addSach(sach);
         assertEquals(3,sachSevice.getAllSach().size());
     }
+    public void them(){
+        Sach sach =  new Sach("Sach6","Conan","NamKhanh",1991,15000);
+        sachSevice.addSach(sach);
+        assertEquals(3,sachSevice.getAllSach().size());
+    }
     @Test
     public void themBienTren(){
         Sach sach =  new Sach("Sach3","Conan","NamKhanh",2025,15000);
