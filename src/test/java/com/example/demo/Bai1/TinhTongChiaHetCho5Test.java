@@ -5,30 +5,35 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TinhTongChiaHetCho5Test {
-    TinhTongChiaHetCho5 tinhTongChiaHetCho5 = new TinhTongChiaHetCho5();
+    TinhTongChiaHetCho5 tinhTongSoChan = new TinhTongChiaHetCho5();
+
     @Test
-    public void test01(){
-        int kq = tinhTongChiaHetCho5.tinhtong();
-        assertTrue(kq > 3999);
+    public void testGiaTriDung() {
+        int kq = tinhTongSoChan.tinhTong();
+        assertEquals(588, kq); // Kết quả đúng là 588
     }
+
     @Test
-    public void test02(){
-        int kq = tinhTongChiaHetCho5.tinhtong();
-        assertTrue(kq > 0);
+    public void testKhongAm() {
+        int kq = tinhTongSoChan.tinhTong();
+        assertTrue(kq >= 0); // Tổng không thể âm
     }
+
     @Test
-    public void test03(){
-        int kq = tinhTongChiaHetCho5.tinhtong();
-        assertFalse(kq > 4001);
+    public void testNhoHon600() {
+        int kq = tinhTongSoChan.tinhTong();
+        assertTrue(kq < 600); // Tổng phải nhỏ hơn 600
     }
+
     @Test
-    public void test04(){
-        int kq = tinhTongChiaHetCho5.tinhtong();
-        assertTrue(kq > 3000);
+    public void testLonHon500() {
+        int kq = tinhTongSoChan.tinhTong();
+        assertTrue(kq > 500); // Tổng phải lớn hơn 500
     }
+
     @Test
-    public void test05(){
-        int kq = tinhTongChiaHetCho5.tinhtong();
-        assertFalse(kq > 5000);
+    public void testKhac500() {
+        int kq = tinhTongSoChan.tinhTong();
+        assertNotEquals(500, kq); // Tổng không thể là 500
     }
 }

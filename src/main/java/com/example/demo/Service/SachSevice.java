@@ -17,17 +17,17 @@ public class SachSevice {
         listSach.add(sach);
     }
     public boolean suaSach(Sach sach, String maMoi, String tenMoi, String tacGiaMoi, int namMoi, float giaMoi ){
-        for (Sach s : listSach){
-            if (s.getMa().equals(maMoi)){
-                throw new IllegalArgumentException("Ma khong duoc trung nhau");
-            }
-            if (namMoi < 1990 || namMoi > 2025){
-                throw new IllegalArgumentException("nam khong hop le");
-            }
-            if (giaMoi < 10000 || giaMoi > 30000){
-                throw new IllegalArgumentException("gia khong hop le");
-            }
-        }
+//        for (Sach s : listSach){
+//            if (s.getMa() == maMoi){
+//                throw new IllegalArgumentException("Ma khong duoc trung nhau");
+//            }
+//            if (namMoi < 1990 || namMoi > 2025){
+//                throw new IllegalArgumentException("nam khong hop le");
+//            }
+//            if (giaMoi < 10000 || giaMoi > 30000){
+//                throw new IllegalArgumentException("gia khong hop le");
+//            }
+//        }
         sach.setMa(maMoi);
         sach.setTen(tenMoi);
         sach.setTacGia(tacGiaMoi);

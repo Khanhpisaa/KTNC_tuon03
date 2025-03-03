@@ -1,10 +1,10 @@
 package com.example.demo.Bai1;
 
 public class TinhTongChiaHetCho5 {
-    public static int tinhtong(){
+    public static int tinhTong() {
         int sum = 0;
-        for (int i = 1; i <= 100; i++){
-            if (i % 5 != 0){
+        for (int i = 2; i <= 50; i += 2) { // Chỉ lấy số chẵn
+            if (i % 8 != 0) { // Loại bỏ số chia hết cho 8
                 sum += i;
             }
         }
@@ -12,7 +12,7 @@ public class TinhTongChiaHetCho5 {
     }
 
     public static void main(String[] args) {
-        int kq = tinhtong();
-        System.out.println(kq);
+        int ketQua = tinhTong();
+        System.out.println("Tổng các số chẵn từ 1 đến 50 và không chia hết cho 8 là: " + ketQua);
     }
 }

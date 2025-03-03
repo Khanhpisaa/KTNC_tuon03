@@ -8,30 +8,35 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class LietKeSoTest {
     LietKeSo lietKeSo = new LietKeSo();
+
     @Test
-    public void test01(){
-        List<Integer> list = lietKeSo.list();
-        assertTrue(list.contains(99));
+    public void testSoNhoNhat() {
+        List<Integer> result = lietKeSo.lietKe();
+        assertTrue(result.contains(1)); // Kiểm tra số nhỏ nhất có trong danh sách
     }
+
     @Test
-    public void test02(){
-        List<Integer> list = lietKeSo.list();
-        assertTrue(list.contains(2));
+    public void testSoLonNhat() {
+        List<Integer> result = lietKeSo.lietKe();
+        assertTrue(result.contains(99)); // Kiểm tra số lớn nhất không chia hết cho 5
     }
+
     @Test
-    public void test03(){
-        List<Integer> list = lietKeSo.list();
-        assertTrue(list.contains(4));
+    public void testSoChiaHetCho5() {
+        List<Integer> result = lietKeSo.lietKe();
+        assertFalse(result.contains(5)); // Kiểm tra số chia hết cho 5 không có trong danh sách
     }
+
     @Test
-    public void test04(){
-        List<Integer> list = lietKeSo.list();
-        assertTrue(list.contains(6));
+    public void testSoGan5() {
+        List<Integer> result = lietKeSo.lietKe();
+        assertTrue(result.contains(4)); // Kiểm tra số ngay trước 5 có trong danh sách
     }
+
     @Test
-    public void test05(){
-        List<Integer> list = lietKeSo.list();
-        assertFalse(list.contains(100));
+    public void testSoGan10() {
+        List<Integer> result = lietKeSo.lietKe();
+        assertTrue(result.contains(11)); // Kiểm tra số ngay sau 10 có trong danh sách
     }
 
 }
